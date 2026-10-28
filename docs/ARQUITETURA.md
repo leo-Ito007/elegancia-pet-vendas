@@ -1,5 +1,9 @@
 # Arquitetura do sistema
 
+O arquivo `index.html`, localizado na raiz, é a entrada principal. Ele carrega
+`src/main.tsx`, que inicia a aplicação React. As chamadas de dados são recebidas
+por `worker.ts` e encaminhadas às rotas da pasta `app/api`.
+
 ## Fluxo de uma venda
 
 1. A interface carrega produtos e clientes por GET /api/store.
@@ -39,7 +43,7 @@ aplicadas em produção.
 
 ## Recomendações para evolução
 
-- separar app/page.tsx em módulos menores ao adicionar novas telas;
+- separar src/App.tsx em módulos menores ao adicionar novas telas;
 - criar testes para regras financeiras e estoque;
 - adicionar permissões antes de liberar acesso a funcionários;
 - implementar cancelamento com devolução controlada ao estoque;
